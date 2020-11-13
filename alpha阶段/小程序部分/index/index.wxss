@@ -1,0 +1,46 @@
+.index-swiper image {
+  width:100%;
+}
+
+.plate{
+  margin-top: 10px;
+  box-shadow: 6rpx 6rpx 6rpx 6rpx rgb(207, 198, 198);
+  height:240rpx;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5%;
+  background:#fff;
+}
+
+.plate-item{
+  display: flex;
+  float:left;
+  position: relative;
+  width: 120rpx;
+  height:180rpx;
+  margin-top:38rpx;
+  margin-left:42rpx;
+}
+
+.plate-img image{
+    width: 80rpx;
+    height: 80rpx;
+  }
+
+.plate-info{
+  position: absolute;
+  height:40rpx;
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+  bottom: 10rpx;
+  left:-10rpx;
+}  
+
+.guess-like{
+  font-weight:bold;
+  font-size: 40rpx;
+  font-family: '微软雅黑';
+}
+
