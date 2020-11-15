@@ -1,0 +1,14 @@
+{
+
+  "usingComponents": { 
+    "van-button": "../../vant/button/index",
+    "van-row": "../../vant/row/index",
+    "van-col": "../../vant/col/index",
+    "van-swipe-cell": "../../vant/swipe-cell/index",
+    "van-cell":"../../vant/cell/index",
+    "van-image":"../../vant/image/index",
+    "van-tabbar":"../../vant/tabbar/index",
+    "van-grid":"../../vant/grid/index"
+  }
+
+}

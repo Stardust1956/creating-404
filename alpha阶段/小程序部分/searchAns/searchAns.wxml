@@ -1,0 +1,37 @@
+<view>
+  <van-search
+  value="{{ value }}"
+  label="书名"
+  shape="round"
+  placeholder="计算机组成原理" 
+  background="#e0620d" 
+  clearable
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+  <button slot="action" bind:tap="onClick" size="mini" plain="true"  style="border-color: #e0620d;display:flex;justify-content: center;"><image src="/icons/search.png" mode="widthFix" style="width:30px;display:flex;justify-content: center;"></image></button>
+</van-search>
+</view>
+
+
+<view wx:for="{{search_book}}">
+  <van-card
+  price="{{item.nowprice}}"
+  desc="{{item.author}}"
+  title="{{item.title}}"
+  thumb="{{item.pic}}"
+  origin-price="{{item.price}}"
+  >
+  <view slot="tags">
+    <van-tag plain type="warning">{{item.position}}</van-tag>
+  </view>
+  <view slot="tags">
+    <van-tag plain type="warning"> {{item.appearance}}成新</van-tag>
+  </view>
+  <view slot="footer">
+    <button size="mini" plain="true" data-value="{{item.bookid}}" bindtap = "connection" style="border-color: #e0620d;"><text>联系卖家</text></button>
+    <button size="mini" plain="true" style="border-color: #e0620d;">想要</button>
+</view>
+</van-card>
+</view>
