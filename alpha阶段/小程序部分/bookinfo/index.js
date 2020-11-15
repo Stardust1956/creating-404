@@ -7,7 +7,6 @@ exports.main =async  (event, context) => {
     uri: 'https://jisuisbn.market.alicloudapi.com/isbn/query',
     qs: {
         isbn: event.isbn 
-        // -> uri + '?isbn=xxxxx%20xxxxx'
     },
     headers: {
         'User-Agent': 'Request-Promise',
