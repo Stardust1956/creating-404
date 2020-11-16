@@ -1,20 +1,19 @@
 <view>
-  <van-search
-  v-model="value"
+  <navigator url="/pages/searchAns/searchAns">
+    <van-search
+  value="{{ value }}"
+  label="书名"
   shape="round"
   placeholder="计算机组成原理" 
-  background="#e0620d" />
+  background="#e0620d" 
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+</van-search>
+  </navigator>
 </view>
-<!-- <view class="book-swiper">
-  <swiper indicator-dots="{{indicatordots}}" autoplay="{{autoplay}}" circular='{{circular}}' interval="{{interval}}">
-    <swiper-item>
-        <image src="/img/计算机组成原理.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-        <image src="/img/编译原理.jpg"></image>
-    </swiper-item>
-  </swiper>
-</view> -->
+
 <!-- 轮播图 -->
 <text>\n</text> 
 <swiper class="index-swiper" indicator-dots="{{indicatordots}}" indicator-active-color="{{color}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:{{height}}">
@@ -41,21 +40,27 @@
 
 <view style="margin-left:10px">
   <text class="guess-like">
-    猜你喜欢
+    部分商品
   </text>
 </view>
 
-<van-card
-  num="2"
-  price="2.00"
-  desc="描述信息"
-  title="商品标题"
-  thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
-/>
-<van-card
-  num="2"
-  price="2.00"
-  desc="描述信息"
-  title="商品标题"
-  thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
-/>
+<view wx:for="{{book_list}}">
+  <van-card
+  price="{{item.nowprice}}"
+  desc="{{item.author}}"
+  title="{{item.title}}"
+  thumb="{{item.pic}}"
+  origin-price="{{item.price}}"
+  >
+  <view slot="tags">
+    <van-tag plain type="warning">{{item.position}}</van-tag>
+  </view>
+  <view slot="tags">
+    <van-tag plain type="warning"> {{item.appearance}}成新</van-tag>
+  </view>
+  <view slot="footer">
+    <button size="mini" plain="true" data-value="{{item.bookid}}" bindtap = "connection" style="border-color: #e0620d;"><text>联系卖家</text></button>
+    <button size="mini" plain="true" id="{{item.bookid}}" bind:click="want" style="border-color: #e0620d;">想要</button>
+</view>
+</van-card>
+</view>
