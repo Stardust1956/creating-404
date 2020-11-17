@@ -1,0 +1,58 @@
+<view>
+  <text style="color:orange">个人信息</text>
+</view>
+<!-- <view style="display: flex;flex-direction: row;justify-content: center;">
+<view class="head">
+  <image src="../img/head.JPG"></image>
+</view>
+</view> -->
+<view style="display: flex;flex-direction: row;justify-content: center;">
+ <van-row>
+  <van-col span="24">
+  <van-image round
+  width="7rem"
+  height="7rem"
+  src="../img/head.JPG"/>
+  </van-col> 
+</van-row> 
+</view>
+<view>
+<van-cell-group>
+  <van-field
+    label="昵称"
+    value="{{ name }}"
+    placeholder="请输入昵称"
+    border="{{ false }}"
+    input-align="right"
+    bind:change="onChange"
+  />
+  <van-field
+    label="个性签名"
+    value="{{ personal }}"
+    placeholder="请输入个性签名"
+    input-align="right"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+  <van-field
+    label="TEL"
+    value="{{ TEL }}"
+    placeholder="请输入手机号"
+    input-align="right"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+  <van-field
+    label="邮箱"
+    value="{{ Email }}"
+    placeholder="请输入邮箱"
+    input-align="right"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+</van-cell-group>
+</view>
+
+<button bind:click="update" class="button_updata">
+  提交修改
+</button>
