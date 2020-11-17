@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 .mybutton{
   position: absolute;
   top:500px;
+=======
+.mybutton{
+  position: absolute;
+  top:500px;
+>>>>>>> origin/main
 }
