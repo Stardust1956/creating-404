@@ -7,7 +7,6 @@ var position=''
 var price=''
 var nowprice=''
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -92,7 +91,6 @@ Page({
   onShareAppMessage: function () {
 
   },
-
 
   addorder:function(event){
     var that=this;
