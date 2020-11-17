@@ -1,0 +1,20 @@
+{
+  "usingComponents": {
+    "van-button": "../../vant/button/index",
+    "van-row": "../../vant/row/index",
+    "van-col": "../../vant/col/index",
+    "van-image":"../../vant/image/index",
+    "van-cell":"../../vant/cell/index",
+    "van-tag":"../../vant/tag/index",
+    "van-card":"../../vant/card/index",
+    "van-search": "../../vant/search/index",
+    "van-icon": "../../vant/icon/index"
+  },
+
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#DE7D2C",
+    "navigationBarTitleText": "已售商品",
+    "navigationBarTextStyle": "black"
+  
+}
