@@ -1,0 +1,33 @@
+<view wx:if="{{book_list.length === 0}}"style="display: flex;flex-direction: row;justify-content: center;">
+ <van-row>
+  <van-col span="24">
+  <van-image
+  width="15rem"
+  height="20rem"
+  fit="contain"
+  src="/img/gwc.svg"
+/>
+  </van-col> 
+</van-row> 
+</view>
+
+<view wx:for="{{book_list}}">
+  <van-card
+  price="{{item.nowprice}}"
+  desc="{{item.author}}"
+  title="{{item.title}}"
+  thumb="{{item.pic}}"
+  origin-price="{{item.price}}"
+  >
+  <view slot="tags">
+    <van-tag plain type="warning">{{item.position}}</van-tag>
+  </view>
+  <view slot="tags">
+    <van-tag plain type="warning"> {{item.appearance}}成新</van-tag>
+  </view>
+  <view slot="footer">
+    <button size="mini" plain="true" data-value="{{item.bookid}}" bindtap = "connection" style="border-color: #e0620d;"><text>联系卖家</text></button>
+    <button size="mini" plain="true" id="{{item.bookid}}" bind:click="want" style="border-color: #e0620d;">想要</button>
+</view>
+</van-card>
+</view>
