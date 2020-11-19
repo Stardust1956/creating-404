@@ -1,0 +1,35 @@
+.title {
+  height: 100rpx;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+  text-align: center;
+}
+
+.button_updata {
+  top: 450rpx;
+  width: 200px;  
+  padding:8px;  
+  background-color: #DE7D2C;  
+  border-color: #DE7D2C;  
+  color: #fff;  
+  -moz-border-radius: 10px;  
+  -webkit-border-radius: 10px;  
+  border-radius: 10px; /* future proofing */  
+  -khtml-border-radius: 10px; /* for old Konqueror browsers */  
+  text-align: center;  
+  vertical-align: middle;  
+  border: 1px solid transparent;  
+  font-weight: 900;  
+  font-size:125%  
+}
+
+.getQQposition {
+  height: 100rpx;
+}
+
+.gettelposition {
+  height: 100rpx;
+}

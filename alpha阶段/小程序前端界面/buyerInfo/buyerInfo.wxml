@@ -1,0 +1,32 @@
+<view class="title">请输入买家信息</view>
+<view class="getQQposition">
+<view>
+<van-cell-group>
+  <van-field
+    label="QQ号"
+    value="{{ QQ }}"
+    placeholder="请输入买家QQ号"
+    border="{{ false }}"
+    bind:change="getQQ"
+  />
+</van-cell-group>
+</view>
+</view>
+
+<view class="gettelposition">
+<view>
+<van-cell-group>
+  <van-field
+    label="手机号"
+    value="{{ tel }}"
+    placeholder="请输入买家手机号"
+    border="{{ false }}"
+    bind:change="gettel"
+  />
+</van-cell-group>
+</view>
+</view>
+
+<button bind:click="update" class="button_updata">
+  提交信息
+</button>
