@@ -1,29 +1,27 @@
-// pages/mysale/mysale.js
+// pages/commodityList/commodityList.js
 const db = wx.cloud.database()
-const app = getApp()
-let qq = ''
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    booklist:[],
-    qq:''
+    book_list:[],
+    collegeName:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app.globalData.openid)
-    db.collection('order').where({"_openid":app.globalData.openid}).get({
+    let id = options["id"]
+    console.log(id)
+    db.collection('upload').where({"college":id}).get({
       success: res => {
         this.setData({
-          booklist:res.data
+          book_list : res.data
         });
-        console.log(booklist)
-
+        
       },
       fail:function(err){
         console.log(err)
@@ -79,6 +77,12 @@ Page({
   onShareAppMessage: function () {
 
   },
+  connection:function(event){
+    let id= event.currentTarget.dataset.value
+    //console.log(id);
+    wx.navigateTo({
+      url: '../sellerInfo/sellerInfo?id='+id,
+    })
+  }
 
-  gosale(){}
 })
