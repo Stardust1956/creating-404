@@ -1,0 +1,23 @@
+<text>\n</text>
+<view style="display: flex;flex-direction: row;justify-content: center;">
+  <text span="6" style="color:orange">卖家信息</text>
+</view>
+<text>\n\n</text>
+<view style="display: flex;flex-direction: row;justify-content: center;">
+ <van-row>
+  <van-col span="24">
+  <van-image round
+  width="7rem"
+  height="7rem"
+  src="/img/head.png"/>
+  </van-col> 
+</van-row> 
+</view>
+
+<van-cell-group>
+  <van-cell title="昵称" value="{{name}}" />
+  <van-cell title="QQ号" value="{{qq}}" />
+  <van-cell title="手机号" value="{{tel}}" />
+  <van-cell title="邮箱" value="{{email}}" />
+  <van-cell title="信誉等级"  label="⭐⭐⭐⭐⭐" />
+</van-cell-group>

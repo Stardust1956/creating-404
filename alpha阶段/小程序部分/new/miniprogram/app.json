@@ -1,0 +1,44 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/scancode/scancode",
+    "pages/my/my",
+    "pages/start/start",
+    "pages/search/search",
+    "pages/mysale/mysale",
+    "pages/mysaled/mysaled",
+    "pages/searchAns/searchAns",
+    "pages/sellerInfo/sellerInfo"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e0620d",
+    "navigationBarTitleText": "福大手手书",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#e0620d",
+    "list": [{
+     "pagePath": "pages/index/index",
+     "text": "主页",
+     "iconPath": "icons/主页.png",
+     "selectedIconPath": "icons/主页1.png"
+    },{
+      "pagePath": "pages/scancode/scancode",
+      "text": "发布",
+      "iconPath": "icons/fabu.png",
+      "selectedIconPath": "icons/fabu1.png"
+    },{
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "icons/我的.png",
+      "selectedIconPath": "icons/我的1.png"
+    }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

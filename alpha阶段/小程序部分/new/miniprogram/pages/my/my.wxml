@@ -1,0 +1,67 @@
+<text>\n{{nickname}}\n</text>
+<view style="display: flex; flex-direction: row; justify-content: center;">
+  <van-row type="flex" justify="center" span="24">
+  <van-image round
+  width="5rem"
+  height="5rem"
+  src="{{avatarUrl}}"/>
+  </van-row>
+</view>
+
+<view style="display: flex; flex-direction: row; justify-content: center;">
+    <van-button plain type="primary" round color="#e0620d" bind:click="logintest" bindtap="logintest" open-type='getUserInfo'>登录</van-button>
+</view>
+<text>\n\n</text>
+  <van-row>
+    <van-col offset="2" span="4" gutter="20">
+      <navigator url="/pages/mysale/mysale">
+        <van-image round
+       width="2rem"
+       height="2rem"
+  src="../imag/zs.png">
+      </van-image>
+      </navigator>
+    </van-col>
+    <van-col offset="2" span="4" gutter="20">
+      <navigator url="/pages/mysaled/mysaled">
+        <van-image round
+       width="2rem"
+       height="2rem"
+  src="../imag/ys.png"/>
+      </navigator>
+    </van-col>
+      
+    <van-col offset="2" span="4" gutter="20">
+      <van-image round
+       width="2rem"
+       height="2rem"
+  src="../imag/mr.png"/>
+    </van-col><van-col offset="2" span="4" gutter="20">
+      <van-image round
+       width="2rem"
+       height="2rem"
+  src="../imag/sc.png"/>
+     </van-col>
+  </van-row>
+  <van-row>
+    <van-col offset="2" span="4" gutter="20">
+     <text size="10px">在售</text>
+    </van-col>
+    <van-col offset="2" span="4" gutter="20">
+     <text>已售</text>
+    </van-col>
+     <van-col offset="2" span="4" gutter="20">
+     <text>订单</text>
+    </van-col> 
+    <van-col offset="2" span="4" gutter="20">
+     <text>收藏</text>
+    </van-col>
+  </van-row>
+  <text>\n\n</text>
+<van-cell-group>
+  <van-cell icon="../imag/grxx.png" title="" value="个人信息" />
+  <!-- <van-cell icon="../imag/收获地址.png" title="" value="收货地址" /> -->
+  <!-- <van-cell icon="../imag/账户安全.png" title="" value="账户安全" /> -->
+  <van-cell icon="../imag/xydj.png"title="" value="信用等级" />
+</van-cell-group>
+

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-button": "../../vant/button/index",
+    "van-row": "../../vant/row/index",
+    "van-col": "../../vant/col/index",
+    "van-image":"../../vant/image/index",
+    "van-cell":"../../vant/cell/index"
+  }
+}
