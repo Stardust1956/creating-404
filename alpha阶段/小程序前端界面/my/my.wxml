@@ -1,18 +1,15 @@
-<text>\n\n\n</text>
+<text>\n{{nickname}}\n</text>
 <view style="display: flex; flex-direction: row; justify-content: center;">
   <van-row type="flex" justify="center" span="24">
   <van-image round
   width="5rem"
   height="5rem"
-  src="../imag/head.png"/>
+  src="{{avatarUrl}}"/>
   </van-row>
 </view>
 
 <view style="display: flex; flex-direction: row; justify-content: center;">
-  <van-cell-group>
-  <van-cell value="羊抄阅" />
-  <!-- <van-cell title="个性签名"  value="认识你们，很开心~" /> -->
-</van-cell-group>
+    <van-button plain type="primary" round color="#e0620d" bind:click="logintest" bindtap="logintest" open-type='getUserInfo'>登录</van-button>
 </view>
 <text>\n\n</text>
   <van-row>

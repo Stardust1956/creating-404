@@ -1,0 +1,88 @@
+  handleAddClient(){
+    wx.showModal({
+      title: '提示',
+      content: '是否确认发布',
+      success (res) {
+      if (res.confirm) {
+        // console.log("tel",isFinite(tel))
+    // console.log("qq",isFinite(qq))
+    // console.log("a",isFinite(parseInt("a")))
+    // console.log("nowprice",isFinite(nowprice))
+    // console.log(name!='')
+    // console.log(appearance!='')
+    var flag = 1
+    if(isFinite(tel)&&isFinite(qq)&&isFinite(appearance)&&isFinite(nowprice)&&tel!=''&&qq!=''&&appearance!=''&&area!=''&&name!=''){
+
+    }
+    else{
+      flag=0;
+    }
+    if(college=="数计学院"||college=="经管学院"){
+    }
+    else{
+      flag=0;
+    }
+    console.log(flag)
+  if(flag==1){
+ 
+      db.collection("client").add({
+        data:{
+          name:name,
+          qq:qq,
+          tel:tel,
+          //price:price,
+          //appearance:appearance,
+          //area:area,
+          //college:college,
+        },
+        success(res){
+          console.log("成功添加")
+        },
+        fail(res){
+          console.log("添加失败")
+        }
+      })
+      db.collection("upload").add({
+        data:{
+          name:name,
+          qq:qq,
+          appearance:appearance,
+          bookid :bookid,
+          nowprice : nowprice,
+          position :area,
+          title : bookname,
+          author: author,
+          college : college,
+          position: area,
+          pic : pic,
+          price : price,
+          tel : tel
+        },
+        success(res){
+          console.log("成功添加")
+          wx.showToast({
+            title: '成功',
+            icon: 'success',
+            duration: 2000
+          })
+          
+        },
+        fail(res){
+          console.log("添加失败")
+        }
+      })
+    }
+  else{
+    console.log("添加失败")
+    wx.showToast({
+      title: '请检查输入',
+      icon: 'loading',
+      duration: 500
+    })
+  }
+      console.log('用户点击确定')
+      } else if (res.cancel) {
+      console.log('用户点击取消')
+      }}})
+    
+  },
