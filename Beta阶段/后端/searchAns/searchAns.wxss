@@ -1,0 +1,4 @@
+/* pages/searchAns/searchAns.wxss */
+.button_style {
+  border-radius: 100px;
+}
