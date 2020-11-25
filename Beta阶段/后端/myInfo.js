@@ -3,6 +3,7 @@ const db=wx.cloud.database()
 let QQ =''
 let tel=''
 let openId = ''
+let qq=''
 Page({
 
   data: {
