@@ -16,7 +16,7 @@
 
 <van-dropdown-menu>
   <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
-  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change = "changesort" />
 </van-dropdown-menu>
 
 
@@ -35,8 +35,8 @@
     <van-tag plain type="warning"> {{item.appearance}}成新</van-tag>
   </view>
   <view slot="footer">
-    <button size="mini" plain="true" data-value="{{item.bookid}}" data-id ="{{item._openid}}" bindtap = "connection" style="border-color: #e0620d;"><text>联系卖家</text></button>
-    <button size="mini" plain="true" data-value="{{item.bookid}}" data-id ="{{item._openid}}" bindtap="want" style="border-color: #e0620d;">想要</button>
+    <button class="button_style" size="mini" plain="true" data-value="{{item.bookid}}" data-id ="{{item._openid}}" bindtap = "connection" style="border-color: #e0620d;color:#e0620d;margin-right:12px"><text style="font-size:13px">联系卖家</text></button>
+    <button class="button_style" size="mini" plain="true" data-value="{{item.bookid}}" data-id ="{{item._openid}}" bindtap="want" style="border-color: #e0620d;color:#e0620d"><text style="font-size:13px">想要</text></button>
 </view>
 </van-card>
 </view>
