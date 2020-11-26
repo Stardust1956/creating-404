@@ -1,0 +1,75 @@
+<view>
+  <navigator url="/pages/searchAns/searchAns">
+    <van-search
+  value="{{ value }}"
+  label="书名"
+  shape="round"
+  placeholder="计算机组成原理" 
+  background="#e0620d" 
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+</van-search>
+  </navigator>
+</view>
+<!-- 轮播图 -->
+<text>\n</text> 
+<swiper class="index-swiper" indicator-dots="{{indicatordots}}" indicator-active-color="{{color}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:{{height}}">
+  <block wx:for="{{img}}" wx:key = "key">
+    <swiper-item>
+      <image src="{{item}}" mode="widthFix" bindload='goheight' />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 分类导航 -->
+<view style="display: flex; flex-direction: row; justify-content: center;">
+  <view class="plate">
+  <block  wx:for = "{{cateslist}}" wx:key = "key" wx:for-index='i'>
+    <view wx:if="{{i<=2}}">
+      <navigator class='plate-item' url='/pages/commodityList/commodityList?id={{item.id}}'>
+    <view class= 'plate-img'>
+      <image src="{{item.url}}" mode="widthFix" />
+    </view>
+    <text class="plate-info">{{item.name}}</text>
+    </navigator>
+    </view>
+    <view wx:else>
+      <navigator class='plate-item' url='/pages/allSort/allSort'>
+      <view class= 'plate-img'>
+        <image src="{{item.url}}" mode="widthFix" />
+      </view>
+      <text class="plate-info">{{item.name}}</text>
+      </navigator>
+    </view>
+  </block>
+</view>
+</view>
+
+<view style="margin-left:10px">
+  <text class="guess-like">
+    部分商品
+  </text>
+</view>
+
+<view wx:for="{{book_list}}">
+  <van-card
+  price="{{item.nowprice}}"
+  desc="{{item.author}}"
+  title="{{item.title}}"
+  thumb="{{item.pic}}"
+  origin-price="{{item.price}}"
+  >
+  <view slot="tags">
+    <van-tag plain type="warning">{{item.position}}</van-tag>
+  </view>
+  <view slot="tags">
+    <van-tag plain type="warning"> {{item.appearance}}成新</van-tag>
+  </view>
+  <view slot="footer">
+    <button class="button_style" size="mini" plain="true" data-value="{{item.bookid}}" data-id ="{{item._openid}}" bindtap = "connection" style="border-color: #e0620d;color:#e0620d;margin-right:12px"><text style="font-size:13px">联系卖家</text></button>
+    <button class="button_style" size="mini" plain="true" data-value="{{item.bookid}}" data-id ="{{item._openid}}" bindtap="want" style="border-color: #e0620d;color:#e0620d"><text style="font-size:13px">想要</text></button>
+</view>
+</van-card>
+</view>
