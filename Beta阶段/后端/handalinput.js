@@ -80,6 +80,7 @@ Page({
   },
   handleName(event){
     name=event.detail.value;
+    
   },
   handleQQ(event){
   qq=parseInt(event.detail.value);
