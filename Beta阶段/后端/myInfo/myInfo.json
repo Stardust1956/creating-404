@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "van-button": "../../vant/button/index",
+    "van-row": "../../vant/row/index",
+    "van-col": "../../vant/col/index",
+    "van-image":"../../vant/image/index",
+    "van-cell":"../../vant/cell/index",
+    "van-nav-bar": "../../vant/nav-bar/index",
+    "van-field":"../../vant/field/index"
+  },
+  
+    "backgroundColor": "#DE7D2C",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#DE7D2C",
+    "navigationBarTitleText": "个人信息",
+    "navigationBarTextStyle": "black"
+  
+}

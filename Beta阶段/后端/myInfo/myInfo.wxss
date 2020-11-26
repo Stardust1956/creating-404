@@ -1,0 +1,38 @@
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.click_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.go_right {
+  position: absolute;
+  text-align:right;
+}
+
+.button_updata {
+  top: 300rpx;
+  width: 200px;  
+  padding:8px;  
+  background-color: #DE7D2C;  
+  border-color: #DE7D2C;  
+  color: #fff;  
+  -moz-border-radius: 10px;  
+  -webkit-border-radius: 10px;  
+  border-radius: 10px; /* future proofing */  
+  -khtml-border-radius: 10px; /* for old Konqueror browsers */  
+  text-align: center;  
+  vertical-align: middle;  
+  border: 1px solid transparent;  
+  font-weight: 900;  
+  font-size:125%  
+}

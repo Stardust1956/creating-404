@@ -1,0 +1,27 @@
+
+<view> 
+<van-cell-group>
+  
+  <van-field
+    label="QQ号"
+    value="{{ QQ }}"
+    placeholder="请输入QQ号"
+    input-align="right"
+    border="{{ false }}"
+    bindblur="getQQ"
+  />
+  <van-field
+    label="手机号"
+    value="{{ TEL }}"
+    placeholder="请输入手机号"
+    input-align="right"
+    border="{{ false }}"
+    bindblur="gettel"
+  />
+  
+</van-cell-group>
+</view>
+
+<button bindtap="updatemyInfo" class="button_updata">
+  提交修改
+</button>
