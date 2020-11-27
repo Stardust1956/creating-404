@@ -1,5 +1,6 @@
 // pages/searchAns/searchAns.js
 const db = wx.cloud.database()
+var t=[];
 Page({
 
   /**
@@ -24,7 +25,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(value)
   },
 
   /**
@@ -40,6 +41,7 @@ Page({
   },
   onClick() {
     console.log('搜索' + this.data.value);
+
     db.collection('upload').where({"title":db.RegExp({
       regexp:".*"+this.data.value+".*"
   })}).get({
@@ -149,5 +151,63 @@ Page({
       }
     )
     
-  }
+  },
+  changesort(e){
+
+    db.collection('upload').where({"title":db.RegExp({
+      regexp:".*"+this.data.value+".*"
+  })}).get({
+      success: res => {
+        this.setData({
+          search_book : res.data
+        });
+        t  = res.data
+        // console.log(t);
+        let type = e.detail
+    console.log(type);
+    console.log(t);
+    if(type === "b")
+    {
+      
+      t.sort(this.compareb);
+      console.log(t)
+      this.setData({
+        search_book : t
+      });
+    }
+    if(type === "c")
+    {
+      
+      t.sort(this.comparec);
+      console.log(t)
+      this.setData({
+        search_book : t
+      });
+    }
+      },
+      fail:function(err){
+        console.log(err)
+      }
+    });
+    
+  },
+  comparec:function (a, b) {
+
+    // console.log("比较")
+
+    // return value1 - value2;
+    // return (a["nowprice"] < b["nowprice"]) ? 1 : -1;
+    return (a["appearance"] < b["appearance"]) ? 1 : -1;
+    },
+  compareb:function (a, b) {
+
+      // console.log("比较")
+  
+      // return value1 - value2;
+      return (a["nowprice"] > b["nowprice"]) ? 1 : -1;
+      // return (a["appearance"] < b["appearance"]) ? 1 : -1;
+      }
+    
+    
+
 })
