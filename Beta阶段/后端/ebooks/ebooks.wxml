@@ -1,0 +1,28 @@
+<text>\n</text>
+<view>
+  <view style="display: flex;flex-direction: row;justify-content: center;">
+    <text style="font-size:50rpx;color:gray;" >电子书兑换</text>
+  </view>
+</view>
+<view>
+  <view style="display: flex;flex-direction: row;justify-content: center;">
+    <text style="font-size:50rpx;color:gray;" >成功交易并评价次数:</text>
+    <!-- 交易次数 -->
+    <text style="font-size:50rpx;color:gray;"> {{times}} </text>
+  </view>
+</view>
+<text>\n</text>
+<van-cell-group>
+  <van-cell title="电子书的链接">
+  </van-cell>
+  <van-cell title="">
+    <text selectable="true" class="link">{{link}}</text>
+  </van-cell>
+  
+  <van-cell title="提取密码" >
+  </van-cell>
+  <van-cell class="link">
+    <text selectable="true">{{code}}</text>
+  </van-cell>
+</van-cell-group>
+

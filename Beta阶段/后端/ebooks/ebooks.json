@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-button": "../../vant/button/index",
+    "van-row": "../../vant/row/index",
+    "van-col": "../../vant/col/index",
+    "van-cell":"../../vant/cell/index",
+    "van-field": "../../vant/field/index",
+    "van-dropdown-menu": "../../vant/dropdown-menu/index",
+    "van-dropdown-item": "../../vant/dropdown-item/index",
+    "van-picker": "../../vant/picker/index",
+    "van-card": "../../vant/card/index",
+    "van-collapse": "../../vant/collapse/index",
+    "van-collapse-item": "../../vant/collapse-item/index"
+  }
+}
