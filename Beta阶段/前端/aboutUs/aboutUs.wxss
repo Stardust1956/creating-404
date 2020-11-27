@@ -1,0 +1,23 @@
+/* 
+.plate{
+  margin-top: 10px;
+  box-shadow: 6rpx 6rpx 6rpx 6rpx rgb(207, 198, 198);
+  height:640rpx;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5%;
+  background:#fff;
+}
+.plate_2{
+  margin-top: 10px;
+  box-shadow: 6rpx 6rpx 6rpx 6rpx rgb(207, 198, 198);
+  height:240rpx;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5%;
+  background:#fff;
+} */
