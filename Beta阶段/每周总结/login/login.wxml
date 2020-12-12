@@ -1,0 +1,60 @@
+<view>
+  <view style="display: flex;flex-direction: row;justify-content: center;">
+    <text style="font-size:50rpx;color:gray;" >注册登录</text>
+  </view>
+</view>
+<view>
+  <text>\n</text>
+</view>
+
+<van-cell-group>
+
+  <van-field
+    size="large"
+    value="{{ namevalue }}"
+    type="textarea"
+    autosize
+    label="姓名"
+    placeholder="请输入姓名"
+    required
+    border="{{ false }}"
+    bind:change="namechange"
+    bindblur="handleName"
+  />
+
+  <van-field
+    size="large"
+    autosize
+    required
+    value="{{phone}}"
+    label="手机"
+    placeholder="请输入手机号"
+    border="{{ false }}"
+    bind:change="TELchange"
+    bindblur="handleTel"
+  />
+
+  <van-field
+    size="large"
+    value="{{ QQvalue }}"
+    type="textarea"
+    autosize
+    required
+    label="QQ"
+    placeholder="请输入您的QQ"
+    border="{{ false }}"
+    bind:change="QQchange"
+    bindblur="handleQQ"
+  />
+</van-cell-group>
+
+<!--底部确认-->
+<view>
+  <text>\n</text><text>\n</text>
+</view>
+
+<view style="display: flex; flex-direction: row; justify-content: center;">
+  <van-row  type="flex" justify="center" span="24" gutter="20">
+    <van-button plain type="primary" round color="#e0620d" bind:click="publish" >保存信息</van-button>
+  </van-row> 
+</view>
