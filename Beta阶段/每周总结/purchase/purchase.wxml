@@ -1,0 +1,37 @@
+<view wx:if="{{book_list.length === 0}}"style="display: flex;flex-direction: row;justify-content: center;">
+ <van-row>
+  <van-col span="24">
+  <van-image
+  width="15rem"
+  height="20rem"
+  fit="contain"
+  src="/img/gwc.svg"
+/>
+  </van-col> 
+</van-row> 
+</view>
+
+<view wx:for="{{book_list}}">
+  <van-card
+  price="{{item.nowprice}}"
+  desc="{{item.author}}"
+  title="{{item.title}}"
+  thumb="{{item.pic}}"
+  origin-price="{{item.price}}"
+  >
+  <view slot="tags">
+    <van-tag plain type="warning">{{item.position}}</van-tag>
+  </view>
+  <view slot="tags">
+    <van-tag plain type="warning"> {{item.appearance}}成新</van-tag>
+  </view>
+  <view wx:if="{{item.iscommon === false}}" slot="footer">
+    <button class="button_style" size="mini" plain="true" data-value="{{item._openid}}" data-orderid="{{item.orderId}}" bindtap = "connection" style="border-color: #e0620d;color:#e0620d;margin-right:12px"><text style="font-size:13px">评价</text></button>
+
+</view>
+<view wx:if="{{item.iscommon === true}}" slot="footer">
+    <button  class="button_style" size="mini" plain="true"  style="border-color: #e0620d;color:#e0620d"><text style="font-size:13px">已评价</text></button>
+
+</view>
+</van-card>
+</view>

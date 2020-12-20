@@ -1,0 +1,4 @@
+/* pages/purchase/purchase.wxss */
+.button_style {
+  border-radius: 100px;
+}
